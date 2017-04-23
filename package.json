@@ -1,30 +1,32 @@
 {
-  "name": "standard-loader",
-  "version": "6.0.1",
-  "description": "Lint webpack builds with feross/standard.",
+  "name": "blyss-loader",
+  "version": "1.0.0",
+  "description": "Lint webpack builds with saadq/blyss.",
   "main": "index.js",
   "scripts": {
-    "lint": "standard index.js test/index.js && echo 'code looks ok.'",
-    "test": "tape test/index.js && npm run lint"
+    "lint": "blyss index.js | snazzy",
+    "fix": "blyss index.js --fix",
+    "test": "npm run lint --silent"
   },
   "keywords": [
     "webpack",
     "eslint",
     "lint",
-    "eshint"
+    "eshint",
+    "blyss"
   ],
-  "author": "Tim Oxley <secoif@gmail.com>",
+  "author": "Saad Quadri",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.3.2",
+    "blyss": "^2.0.0",
     "node-libs-browser": "^2.0.0",
-    "standard": "^9.0.0",
     "tape": "^4.6.3",
     "webpack": "^2.2.1"
   },
-  "standard": {
+  "blyss": {
     "parser": "babel-eslint"
   },
   "dependencies": {
@@ -32,18 +34,16 @@
     "object-assign": "^4.1.1",
     "snazzy": "^6.0.0"
   },
-  "peerDependencies": {
-    "standard": "*"
-  },
+  "peerDependencies": {},
   "directories": {
     "example": "example"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/timoxley/standard-loader.git"
+    "url": "git+https://github.com/saadq/blyss-loader.git"
   },
   "bugs": {
-    "url": "https://github.com/timoxley/standard-loader/issues"
+    "url": "https://github.com/saadq/blyss-loader/issues"
   },
-  "homepage": "https://github.com/timoxley/standard-loader#readme"
+  "homepage": "https://github.com/saadq/blyss-loader#readme"
 }
